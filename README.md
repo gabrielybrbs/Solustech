@@ -6,4 +6,4 @@ Este é um projeto que está sendo desenvolvido como teste para uma página de v
 Execute o arquivo HTML para vê o resultado. 
 
 ## Data de ínicio:
-24/03/2025
+
