@@ -118,10 +118,10 @@ a:hover {
 
 .linha {
   width: 50%;
-  height: 4px;
+  height: 2px;
   /* Espessura da linha */
   background-color: #008f66;
   /* Cor da linha */
-  margin: 20px 0;
+  margin: 10px 0;
   /* Espaçamento */
 }
