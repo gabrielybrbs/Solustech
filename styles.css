@@ -135,6 +135,8 @@ a:hover {
 .btn-depoimento,
 .btn-comprar {
   background-color: var(--green);
+  color: var(--black);
+  /* Texto do botão agora é preto */
   padding: 12px 24px;
   border-radius: 5px;
   margin-top: 1rem;
@@ -152,6 +154,8 @@ a:hover {
 .btn-depoimento:hover,
 .btn-comprar:hover {
   background-color: var(--dark-green);
+  color: var(--black);
+  /* Manter o texto preto quando passar o mouse */
 }
 
 /* Seções */
