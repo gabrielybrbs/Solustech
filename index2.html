@@ -4,17 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dominhando o Docker</title>
+  <title>Dominando o Docker</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="https://ithelp.ithome.com.tw/upload/images/20230918/20162058XGSPq1Ts0C.png">
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
-      <h1>Dominando o Docker</h1>
-      <div class="linha"></div>
-      <nav>
+    <div class="container header-flex">
+      <h1 class="title-left">Dominando o Docker</h1>
+      <nav class="nav-right">
         <ul>
           <li><a href="#sobre">Sobre o Livro</a></li>
           <li><a href="#autor">Autor</a></li>
@@ -22,28 +21,27 @@
         </ul>
       </nav>
     </div>
+    <div class="linha"></div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container">
-        <h2>Domine as ferramentas de TI com esse guia completos</h2>
-        <!-- Adicionando a imagem -->
+        <h2 class="title-left">Domine as ferramentas de TI com esse guia completo</h2>
         <img src="https://i.ibb.co/kcDzqP5/C-pia-de-Dcark.png" alt="Capa do Livro Dominando a Tecnologia" class="livro">
         <p>Aprenda as práticas essenciais para transformar sua carreira</p>
-        <!-- Adicionando a imagem -->
-        <a href="https://pay.kirvano.com/4e96a2ce-3822-40a5-a7ed-33f85ed4630d" class="btn">Adquira o Livro</a>
+        <div class="button-right">
+          <a href="https://pay.kirvano.com/4e96a2ce-3822-40a5-a7ed-33f85ed4630d" class="btn">Adquira o Livro</a>
+        </div>
       </div>
     </section>
 
-    <section id="sobre" class="sobre">
+    <section id="sobre" class="sobre hero">
       <div class="container">
         <h3 class="title-left">Sobre o Livro</h3>
         <p>Neste livro você irá entender na prática como utilizar containers Docker de uma forma que (realmente)
           esperamos que seja divertida! Haverá muitas explicações, analogias, exemplos, tudo para que você consiga
-          dominar o Docker e a utilização de containers de forma efetiva.
-          Se você trabalha em operações, chega de perder horas configurando um servidor de aplicação e quebrando a
-          cabeça pensando em como escalar seu ambiente de maneira fácil, rápida e que não custe os olhos da cara.</p>
+          dominar o Docker e a utilização de containers de forma efetiva.</p>
         <ul>
           <li>Entenda as bases de sistemas modernos.</li>
           <li>Gerencie contêineres de forma eficiente.</li>
@@ -54,7 +52,7 @@
 
     <section id="depoimentos" class="depoimentos">
       <div class="container">
-        <h3 class="title-left">Depoimentos</h3>
+        <h3>Depoimentos</h3>
         <div class="card">
           <p>"Um guia indispensável para profissionais de tecnologia."</p>
           <cite>- João Almeida</cite>
@@ -77,12 +75,10 @@
 
     <section id="autor" class="autor">
       <div class="container">
-        <h3 class="title-left">Sobre o Autor</h3>
+        <h3>Sobre o Autor</h3>
         <p>Com mais de 15 anos de experiência na área de Tecnologia da Informação, sou um profissional dedicado à
           análise, desenvolvimento e suporte técnico, com uma sólida trajetória em projetos inovadores e soluções
-          eficazes. Além de atuar diretamente no mercado, compartilho meu conhecimento como autor de livros técnicos
-          voltados para suporte e boas práticas em TI, ajudando profissionais e equipes a otimizar processos e superar
-          desafios tecnológicos. Minha paixão por tecnologia é aliada à busca constante por aprendizado e inovação</p>
+          eficazes.</p>
       </div>
     </section>
   </main>
