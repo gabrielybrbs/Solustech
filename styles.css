@@ -116,12 +116,10 @@ a:hover {
   background-color: var(--black);
 }
 
-.linha {
-  width: 50%;
-  height: 2px;
-  /* Espessura da linha */
-  background-color: #008f66;
-  /* Cor da linha */
-  margin: 10px 0;
-  /* Espaçamento */
+.linha-neon {
+  width: 100%;
+  height: 4px;
+  background-color: #39ff14;
+  /* Verde neon */
+  margin: 20px 0;
 }
