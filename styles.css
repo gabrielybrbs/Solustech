@@ -116,13 +116,12 @@ a:hover {
   background-color: var(--black);
 }
 
-.linha-neon {
-  width: 50%;
+.linha {
+  width: 100%;
   /* Ajuste a largura conforme necessário */
   height: 4px;
   background-color: #39ff14;
   /* Verde neon */
-  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
   margin: 20px auto;
   /* Centraliza horizontalmente */
 }
