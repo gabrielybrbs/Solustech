@@ -1,4 +1,4 @@
-/* Variáveis de cores baseadas no index2.html */
+/* Variáveis de cores */
 :root {
   --black: #0d0d0d;
   --green: #00ffcc;
@@ -24,7 +24,7 @@ h1 {
 
 a {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 50px;
   background-color: var(--green);
   color: var(--black);
   text-decoration: none;
