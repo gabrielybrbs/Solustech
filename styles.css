@@ -1,4 +1,4 @@
-/* Variáveis de cores */
+/* Variáveis de cores baseadas no index2.html */
 :root {
   --black: #0d0d0d;
   --green: #00ffcc;
@@ -24,7 +24,7 @@ h1 {
 
 a {
   display: inline-block;
-  padding: 10px 50px;
+  padding: 10px 20px;
   background-color: var(--green);
   color: var(--black);
   text-decoration: none;
@@ -135,8 +135,6 @@ a:hover {
 .btn-depoimento,
 .btn-comprar {
   background-color: var(--green);
-  color: var(--black);
-  /* Texto do botão agora é preto */
   padding: 12px 24px;
   border-radius: 5px;
   margin-top: 1rem;
@@ -154,8 +152,6 @@ a:hover {
 .btn-depoimento:hover,
 .btn-comprar:hover {
   background-color: var(--dark-green);
-  color: var(--black);
-  /* Manter o texto preto quando passar o mouse */
 }
 
 /* Seções */
