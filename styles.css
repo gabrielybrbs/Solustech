@@ -90,6 +90,22 @@ a:hover {
   list-style: none;
 }
 
+.nav-right {
+  display: flex;
+  justify-content: center;
+  /* centraliza horizontalmente */
+}
+
+.nav-right ul {
+  display: flex;
+  list-style: none;
+  /* tira as bolinhas da lista */
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  /* espaçamento entre os itens */
+}
+
 .nav-right ul li a {
   text-decoration: none;
   color: inherit;
