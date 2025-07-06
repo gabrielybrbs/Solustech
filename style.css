@@ -52,6 +52,14 @@ nav {
   flex-wrap: wrap;
   /* Permite quebra de linha no menu em telas menores */
   padding: 0.5rem;
+  position: sticky;
+  /* Fixa no topo */
+  top: 0;
+  /* Começa no topo */
+  z-index: 999;
+  /* Fica acima dos outros elementos */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  /* sombra leve */
 }
 
 nav a {
