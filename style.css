@@ -22,17 +22,28 @@ header {
   text-align: center;
 }
 
-.logo-title {
+/* Banner no topo com espaço reduzido */
+.top-banner {
+  width: 100%;
+  /*background-color: #121212;
+  /* cor de fundo escura como na sua imagem */
   display: flex;
-  align-items: center;
-  gap: 1rem;
   justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  /* menor padding = menos espaço em cima/baixo */
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 60px;
+/* Apenas para a logo do topo */
+.top-banner .logo-full {
+  height: 120px;
   width: auto;
+  object-fit: contain;
 }
+
+
+
 
 @media (min-width: 768px) {
   .logo-title {
@@ -59,7 +70,7 @@ nav {
   z-index: 999;
   /* Fica acima dos outros elementos */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  /* sombra leves */
+  /* sombra leve */
 }
 
 nav a {
