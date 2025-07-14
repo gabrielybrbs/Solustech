@@ -1,12 +1,40 @@
 /* Importando fonte moderna do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+:root {
+  --verde-escuro: #0b3d0b;
+  --verde-medio: #1e7f1e;
+  --verde-claro: #a6e6a6;
+  --verde-fundo: #e5fbe5;
+  --preto-fundo: #1a1a1a;
+  --branco-texto: #ffffff;
+}
+
+/* Banner no topo com espaço reduzido */
+.top-banner {
+  width: 100%;
+  /* cor de fundo escura como na sua imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 0;
+  /* menor padding = menos espaço em cima/baixo */
+  box-sizing: border-box;
+}
+
+/* Apenas para a logo do topo */
+.top-banner .logo-full {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  /* Fonte alterada para Montserrat */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Alterar fonte  */
 }
 
 body {
@@ -15,35 +43,13 @@ body {
   line-height: 1.6;
 }
 
+/* cor e tamanho do topo */
 header {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  padding: 1.5rem;
+  background: linear-gradient(to right, var(--verde-escuro), var(--verde-medio));
+  padding: 15px 20px;
   text-align: center;
+  color: white;
 }
-
-/* Banner no topo com espaço reduzido */
-.top-banner {
-  width: 100%;
-  /*background-color: #121212;
-  /* cor de fundo escura como na sua imagem */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 0;
-  /* menor padding = menos espaço em cima/baixo */
-  box-sizing: border-box;
-}
-
-/* Apenas para a logo do topo */
-.top-banner .logo-full {
-  height: 120px;
-  width: auto;
-  object-fit: contain;
-}
-
-
-
 
 @media (min-width: 768px) {
   .logo-title {
@@ -57,54 +63,55 @@ header {
 }
 
 nav {
-  background: #2c2c2c;
+  background-color: var(--verde-medio);
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   /* Permite quebra de linha no menu em telas menores */
+  flex-wrap: wrap;
+  /* Fixa no topo */
   padding: 0.5rem;
   position: sticky;
-  /* Fixa no topo */
-  top: 0;
   /* Começa no topo */
-  z-index: 999;
+  top: 0;
   /* Fica acima dos outros elementos */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  /* sombra leve */
+  z-index: 999;
+  /* sombra leve*/
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+/*menu do topo*/
 nav a {
-  color: #00ff88;
+  /*cor e tamanho da fonte*/
+  font-size: 1.2rem;
+  color: white;
   margin: 0.5rem 1rem;
   /* Ajustado para espaçamento responsivo */
   text-decoration: none;
-  font-weight: bold;
   position: relative;
   z-index: 1;
-  transition: color 0.3s ease;
-  /* Suaviza a transição de cor no hover */
+  /* Suaviza a transição de cor */
+  transition: background 0.3s;
 }
 
 nav a:hover {
-  color: #ffffff;
   /* Cor do link ao passar o mouse */
+  background-color: var(--verde-escuro);
 }
 
 .slogan {
-  background-color: #1a1a1a;
-  color: #00ff88;
+  background-color: var(--verde-medio);
+  /*cor do texto*/
+  color: #ffffff;
+  /* Alinha o texto no centro */
   text-align: center;
+  /*espaçamento interno*/
   padding: 1rem 2rem;
+  /*tamanho da fonte*/
   font-size: 1.2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out forwards;
   /* Animação mais suave */
   position: relative;
   z-index: 0;
+  /*espaçamento superior*/
   margin-top: 1.5rem;
 }
 
@@ -189,7 +196,7 @@ section {
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background: #1e1e1e;
+  background-color: var(--verde-escuro);
   color: white;
 }
 
@@ -298,5 +305,71 @@ footer {
   .product-card {
     flex: 1 1 100%;
     /* 1 por linha */
+  }
+}
+
+/* ===================== MODO CLARO ===================== */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f5f5f5;
+    color: #121212;
+  }
+
+  header {
+    background-color: #e0e0e0;
+    color: #121212;
+  }
+
+  nav {
+    background: #d0d0d0;
+  }
+
+  nav a {
+    color: #008040;
+  }
+
+  nav a:hover {
+    color: #000;
+  }
+
+  .slogan {
+    background-color: #e9e9e9;
+    color: #008040;
+    box-shadow: 0 0 10px rgba(0, 128, 64, 0.2);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .container,
+  .cards-duplos .card,
+  .product-card {
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 128, 64, 0.1);
+  }
+
+  .product img,
+  .product-card img {
+    border: 2px solid #008040;
+  }
+
+  .product-card h2,
+  .info h2 {
+    color: #008040;
+  }
+
+  .buy-btn {
+    background: #00cc70;
+    color: white;
+  }
+
+  .buy-btn:hover {
+    background: #009f50;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--verde-escuro);
+    color: white;
   }
 }

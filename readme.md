@@ -10,3 +10,5 @@ Execute o arquivo index.html para vê o resultado.
 24/03/2025
 ## Data de atualização:
 10/07/2025
+## Data de atualização:
+14/07/2025
