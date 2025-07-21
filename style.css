@@ -66,8 +66,7 @@ nav {
   background-color: var(--verde-medio);
   display: flex;
   justify-content: center;
-  /* Permite quebra de linha no menu em telas menores */
-  flex-wrap: wrap;
+  /* REMOVIDO: flex-wrap: wrap; para evitar quebra de linha */
   /* Fixa no topo */
   padding: 0.5rem;
   position: sticky;
@@ -91,6 +90,8 @@ nav a {
   z-index: 1;
   /* Suaviza a transição de cor */
   transition: background 0.3s;
+  /* Adicionado para garantir que o texto não quebre se houver espaço */
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -202,13 +203,27 @@ footer {
 
 /* Estilos responsivos para telas menores */
 @media (max-width: 768px) {
+
+  /* REMOVIDO OU MODIFICADO: nav { flex-direction: column; } */
+  /* Se você remover, o menu ficará em uma única linha,
+     mas pode sair da tela em dispositivos muito pequenos.
+     Se quiser que ele não quebre, mas ainda seja funcional,
+     você precisaria de um menu hamburger para mobile. */
+  /* Para manter todos na mesma linha, mas talvez com rolagem horizontal se não couber: */
   nav {
-    flex-direction: column;
-    /* Menu empilhado no mobile */
+    overflow-x: auto;
+    /* Permite rolagem horizontal se os itens não couberem */
+    justify-content: flex-start;
+    /* Alinha os itens à esquerda na barra de navegação */
+    flex-wrap: nowrap;
+    /* Garante que os itens não quebrem linha */
   }
 
   nav a {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0.5rem;
+    /* Ajustado para um espaçamento menor em telas pequenas */
+    flex-shrink: 0;
+    /* Impede que os itens do menu diminuam de tamanho */
   }
 
   .product {
