@@ -68,7 +68,7 @@ nav {
   display: flex;
   justify-content: center;
   /* Permite quebra de linha no menu em telas menores */
-  /*flex-wrap: wrap;
+  flex-wrap: wrap;
   /* Fixa no topo */
   padding: 0.5rem;
   position: sticky;
@@ -251,7 +251,7 @@ footer {
 
 .cards-duplos {
   display: flex;
-  /*flex-wrap: wrap;
+  flex-wrap: wrap;
   /* Permite quebrar em telas pequenas */
   gap: 1.5rem;
   /* Espaço entre cards reduzido para mobile */
@@ -285,7 +285,7 @@ footer {
 
 .produtos-lista {
   display: flex;
-  /*flex-wrap: wrap;
+  flex-wrap: wrap;
   /* permite quebra de linha em telas menores */
   gap: 1.5rem;
   /* Espaço entre produtos reduzido para mobile */
@@ -335,7 +335,7 @@ footer {
 
 @media (min-width: 601px) and (max-width: 900px) {
   .product-card {
-    flex: 1 1 30%;
+    flex: 1 1 45%;
     /* 2 por linha em tablets */
     max-width: calc(50% - 0.75rem);
   }
