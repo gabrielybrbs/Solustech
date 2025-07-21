@@ -1,5 +1,5 @@
 /* Importando fonte moderna do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
   --verde-escuro: #0b3d0b;
@@ -17,14 +17,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1px 0;
-  /* menor padding = menos espaço em cima/baixo */
+  padding: 5px 0;
+  /* Reduzido para menos espaço em cima/baixo */
   box-sizing: border-box;
 }
 
 /* Apenas para a logo do topo */
 .top-banner .logo-full {
-  height: 100px;
+  height: 80px;
+  /* Altura da logo ajustada para mobile */
   width: auto;
   object-fit: contain;
 }
@@ -33,8 +34,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* Alterar fonte  */
+  font-family: "Montserrat", sans-serif;
+  /* Alterado para a fonte Montserrat importada */
 }
 
 body {
@@ -67,7 +68,7 @@ nav {
   display: flex;
   justify-content: center;
   /* Permite quebra de linha no menu em telas menores */
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;
   /* Fixa no topo */
   padding: 0.5rem;
   position: sticky;
@@ -82,15 +83,19 @@ nav {
 /*menu do topo*/
 nav a {
   /*cor e tamanho da fonte*/
-  font-size: 1.2rem;
+  font-size: 1rem;
+  /* Fonte menor para mobile */
   color: white;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0.8rem;
   /* Ajustado para espaçamento responsivo */
   text-decoration: none;
   position: relative;
   z-index: 1;
   /* Suaviza a transição de cor */
   transition: background 0.3s;
+  padding: 0.5rem 0.8rem;
+  /* Adicionado padding para facilitar o clique no mobile */
+  border-radius: 5px;
 }
 
 nav a:hover {
@@ -105,9 +110,9 @@ nav a:hover {
   /* Alinha o texto no centro */
   text-align: center;
   /*espaçamento interno*/
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   /*tamanho da fonte*/
-  font-size: 1.2rem;
+  font-size: 1rem;
   /* Animação mais suave */
   position: relative;
   z-index: 0;
@@ -131,16 +136,16 @@ nav a:hover {
 .container {
   max-width: 1100px;
   margin: 2rem auto;
-  padding: 2rem;
-  /* Aumentado para dar mais espaço interno */
+  padding: 1.5rem;
+  /* Reduzido para mobile */
   background: #1a1a1a;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
 }
 
 section {
-  margin-bottom: 3rem;
-  /* Espaço entre seções */
+  margin-bottom: 2rem;
+  /* Espaço entre seções reduzido para mobile */
 }
 
 .product {
@@ -152,9 +157,12 @@ section {
 
 .product img {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
+  /* Max-width ajustada para mobile */
   border-radius: 10px;
   border: 2px solid #00ff88;
+  margin: 0 auto;
+  /* Centraliza a imagem no mobile */
 }
 
 .info {
@@ -165,11 +173,14 @@ section {
   margin-bottom: 1rem;
   color: #00ff88;
   font-weight: 700;
-  /* Título mais destacado */
+  font-size: 1.5rem;
+  /* Tamanho de título ajustado para mobile */
 }
 
 .info p {
   margin-bottom: 1rem;
+  font-size: 0.95rem;
+  /* Tamanho de parágrafo ajustado para mobile */
 }
 
 .buy-btn {
@@ -183,7 +194,14 @@ section {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  /* Suaviza a animação do botão */
+  width: 100%;
+  /* Botão ocupa 100% da largura no mobile */
+  max-width: 250px;
+  /* Limita o tamanho do botão */
+  display: block;
+  /* Garante que o botão seja um bloco para margin auto funcionar */
+  margin: 1rem auto 0 auto;
+  /* Centraliza o botão e adiciona espaço superior */
 }
 
 .buy-btn:hover {
@@ -195,9 +213,12 @@ section {
 
 footer {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
+  /* Padding reduzido para mobile */
   background-color: var(--verde-escuro);
   color: white;
+  font-size: 0.9rem;
+  /* Tamanho da fonte do rodapé ajustado */
 }
 
 /* Estilos responsivos para telas menores */
@@ -214,56 +235,71 @@ footer {
   .product {
     flex-direction: column;
     /* Produtos empilhados no mobile */
+    text-align: center;
   }
 
   .info {
     text-align: center;
     /* Centraliza o texto dos serviços */
   }
+
+  .product img {
+    max-width: 80%;
+    /* Imagem menor no mobile */
+  }
 }
 
 .cards-duplos {
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;
   /* Permite quebrar em telas pequenas */
-  gap: 2rem;
-  justify-content: space-between;
+  gap: 1.5rem;
+  /* Espaço entre cards reduzido para mobile */
+  justify-content: center;
+  /* Centraliza os cards */
 }
 
 .cards-duplos .card {
-  flex: 1 1 48%;
-  /* Ocupa até 48% com espaço entre os dois */
+  flex: 1 1 100%;
+  /* Ocupa 100% da largura no mobile */
   background-color: #1a1a1a;
-  padding: 2rem;
+  padding: 1.5rem;
+  /* Padding reduzido */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  text-align: center;
 }
 
 /* Responsivo: empilha os cards no mobile */
-@media (max-width: 768px) {
-  .cards-duplos {
-    flex-direction: column;
-  }
+@media (min-width: 769px) {
 
+  /* Apenas para telas maiores que 768px, os cards ficam lado a lado */
   .cards-duplos .card {
-    flex: 1 1 100%;
+    flex: 1 1 48%;
+    /* Ocupa até 48% com espaço entre os dois */
+    max-width: calc(50% - 0.75rem);
+    /* Garante o espaçamento correto */
   }
 }
 
+
 .produtos-lista {
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;
   /* permite quebra de linha em telas menores */
-  gap: 2rem;
-  justify-content: space-between;
+  gap: 1.5rem;
+  /* Espaço entre produtos reduzido para mobile */
+  justify-content: center;
+  /* Centraliza os cards de produto */
 }
 
 .product-card {
   background-color: #1a1a1a;
-  flex: 1 1 30%;
-  /* até 3 por linha em telas grandes */
+  flex: 1 1 100%;
+  /* 1 por linha no mobile */
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1.2rem;
+  /* Padding reduzido */
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
   display: flex;
   flex-direction: column;
@@ -273,9 +309,10 @@ footer {
 
 .product-card img {
   width: 100%;
-  max-width: 250px;
-  height: 275px;
-  /* altura fixa */
+  max-width: 200px;
+  /* Max-width ajustada para mobile */
+  height: 220px;
+  /* altura fixa ajustada para mobile */
   object-fit: cover;
   /* recorta para encaixar sem distorcer */
   margin-bottom: 1rem;
@@ -285,26 +322,30 @@ footer {
 
 .product-card h2 {
   color: #00ff88;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  /* Fonte menor para mobile */
+  margin-bottom: 0.8rem;
 }
 
 .product-card p {
   margin-bottom: 1rem;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  /* Fonte menor para mobile */
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .product-card {
-    flex: 1 1 45%;
-    /* 2 por linha */
+    flex: 1 1 30%;
+    /* 2 por linha em tablets */
+    max-width: calc(50% - 0.75rem);
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 901px) {
   .product-card {
-    flex: 1 1 100%;
-    /* 1 por linha */
+    flex: 1 1 30%;
+    /* até 3 por linha em telas grandes */
+    max-width: calc(33.333% - 1rem);
   }
 }
 
