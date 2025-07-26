@@ -10,31 +10,12 @@
   --branco-texto: #ffffff;
 }
 
-/* Banner no topo com espaço reduzido */
-.top-banner {
-  width: 100%;
-  /* cor de fundo escura como na sua imagem */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1px 0;
-  /* menor padding = menos espaço em cima/baixo */
-  box-sizing: border-box;
-}
-
-/* Apenas para a logo do topo */
-.top-banner .logo-full {
-  height: 100px;
-  width: auto;
-  object-fit: contain;
-}
-
+/* Reset e fonte */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* Alterar fonte  */
 }
 
 body {
@@ -43,7 +24,32 @@ body {
   line-height: 1.6;
 }
 
-/* cor e tamanho do topo */
+/* Meta viewport deve estar no HTML */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+/* Banner no topo */
+.top-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 0;
+  box-sizing: border-box;
+}
+
+.top-banner .logo-full {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .top-banner .logo-full {
+    height: 70px;
+    /* Reduz a logo no mobile */
+  }
+}
+
 header {
   background: linear-gradient(to right, var(--verde-escuro), var(--verde-medio));
   padding: 15px 20px;
@@ -66,52 +72,52 @@ nav {
   background-color: var(--verde-medio);
   display: flex;
   justify-content: center;
-  /* Permite quebra de linha no menu em telas menores */
   flex-wrap: wrap;
-  /* Fixa no topo */
+  /* Permite quebra de linha */
   padding: 0.5rem;
   position: sticky;
-  /* Começa no topo */
   top: 0;
-  /* Fica acima dos outros elementos */
   z-index: 999;
-  /* sombra leve*/
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/*menu do topo*/
 nav a {
-  /*cor e tamanho da fonte*/
   font-size: 1.2rem;
   color: white;
   margin: 0.5rem 1rem;
-  /* Ajustado para espaçamento responsivo */
   text-decoration: none;
   position: relative;
   z-index: 1;
-  /* Suaviza a transição de cor */
   transition: background 0.3s;
+  padding: 0.5rem 1rem;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  nav a {
+    font-size: 0.9rem;
+    /* Reduz mais a fonte no mobile */
+    margin: 0.2rem 0.3rem;
+    /* Reduz margem */
+    padding: 0.3rem 0.5rem;
+    /* Reduz padding */
+  }
 }
 
 nav a:hover {
-  /* Cor do link ao passar o mouse */
   background-color: var(--verde-escuro);
 }
 
 .slogan {
   background-color: var(--verde-medio);
-  /*cor do texto*/
   color: #ffffff;
-  /* Alinha o texto no centro */
   text-align: center;
-  /*espaçamento interno*/
   padding: 1rem 2rem;
-  /*tamanho da fonte*/
   font-size: 1.2rem;
-  /* Animação mais suave */
   position: relative;
   z-index: 0;
-  /*espaçamento superior*/
   margin-top: 1.5rem;
 }
 
@@ -119,7 +125,6 @@ nav a:hover {
   from {
     opacity: 0;
     transform: translateY(-10px);
-    /* Efeito de descer suavemente */
   }
 
   to {
@@ -132,7 +137,6 @@ nav a:hover {
   max-width: 1100px;
   margin: 2rem auto;
   padding: 2rem;
-  /* Aumentado para dar mais espaço interno */
   background: #1a1a1a;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
@@ -140,7 +144,6 @@ nav a:hover {
 
 section {
   margin-bottom: 3rem;
-  /* Espaço entre seções */
 }
 
 .product {
@@ -152,7 +155,8 @@ section {
 
 .product img {
   width: 100%;
-  max-width: 400px;
+  height: auto;
+  max-width: 100%;
   border-radius: 10px;
   border: 2px solid #00ff88;
 }
@@ -165,7 +169,6 @@ section {
   margin-bottom: 1rem;
   color: #00ff88;
   font-weight: 700;
-  /* Título mais destacado */
 }
 
 .info p {
@@ -183,14 +186,11 @@ section {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  /* Suaviza a animação do botão */
 }
 
 .buy-btn:hover {
   background: #00cc70;
-  /* Cor diferente no hover */
   transform: scale(1.05);
-  /* Efeito de leve crescimento */
 }
 
 footer {
@@ -200,46 +200,36 @@ footer {
   color: white;
 }
 
-/* Estilos responsivos para telas menores */
+/* Responsivo */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    /* Menu empilhado no mobile */
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-  }
-
   .product {
     flex-direction: column;
-    /* Produtos empilhados no mobile */
   }
 
   .info {
     text-align: center;
-    /* Centraliza o texto dos serviços */
+  }
+
+  .container {
+    padding: 1rem;
   }
 }
 
 .cards-duplos {
   display: flex;
   flex-wrap: wrap;
-  /* Permite quebrar em telas pequenas */
   gap: 2rem;
   justify-content: space-between;
 }
 
 .cards-duplos .card {
   flex: 1 1 48%;
-  /* Ocupa até 48% com espaço entre os dois */
   background-color: #1a1a1a;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
 }
 
-/* Responsivo: empilha os cards no mobile */
 @media (max-width: 768px) {
   .cards-duplos {
     flex-direction: column;
@@ -253,7 +243,6 @@ footer {
 .produtos-lista {
   display: flex;
   flex-wrap: wrap;
-  /* permite quebra de linha em telas menores */
   gap: 2rem;
   justify-content: space-between;
 }
@@ -261,7 +250,6 @@ footer {
 .product-card {
   background-color: #1a1a1a;
   flex: 1 1 30%;
-  /* até 3 por linha em telas grandes */
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
@@ -274,10 +262,8 @@ footer {
 .product-card img {
   width: 100%;
   max-width: 250px;
-  height: 275px;
-  /* altura fixa */
+  height: auto;
   object-fit: cover;
-  /* recorta para encaixar sem distorcer */
   margin-bottom: 1rem;
   border-radius: 10px;
   border: 2px solid #00ff88;
@@ -297,14 +283,31 @@ footer {
 @media (max-width: 900px) {
   .product-card {
     flex: 1 1 45%;
-    /* 2 por linha */
   }
 }
 
 @media (max-width: 600px) {
   .product-card {
     flex: 1 1 100%;
-    /* 1 por linha */
+  }
+}
+
+@media (max-width: 400px) {
+  .product-card {
+    padding: 1rem;
+  }
+
+  .product-card h2 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+  }
+
+  .buy-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
   }
 }
 
