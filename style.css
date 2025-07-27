@@ -79,22 +79,26 @@ nav {
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   /* Sombra mais leve */
 }
 
 nav a {
   font-size: 1.2rem;
   color: white;
-  margin: 0.5rem 1rem;
+  margin: 0.3rem 0.5rem;
+  /* Reduz margem entre links do menu */
   text-decoration: none;
   position: relative;
   z-index: 1;
   transition: background 0.3s;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
+  /* Reduz padding para espaçamento mais justo */
   display: block;
   text-align: center;
   white-space: nowrap;
+  letter-spacing: -0.3px;
+  /* Reduz espaçamento entre letras do menu */
 }
 
 @media (max-width: 768px) {
