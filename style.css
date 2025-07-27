@@ -74,11 +74,13 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   /* Permite quebra de linha */
-  padding: 0.5rem;
+  padding: 0.02rem;
+  /* Reduz espessura da linha do menu */
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  /* Sombra mais leve */
 }
 
 nav a {
@@ -103,6 +105,16 @@ nav a {
     /* Reduz margem */
     padding: 0.3rem 0.5rem;
     /* Reduz padding */
+  }
+
+  .slogan {
+    font-size: 0.9rem;
+    /* Reduz tamanho da fonte no mobile igual ao menu */
+  }
+
+  footer {
+    font-size: 0.9rem;
+    /* Reduz tamanho da fonte no mobile igual ao menu */
   }
 }
 
@@ -200,21 +212,6 @@ footer {
   color: white;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .product {
-    flex-direction: column;
-  }
-
-  .info {
-    text-align: center;
-  }
-
-  .container {
-    padding: 1rem;
-  }
-}
-
 .cards-duplos {
   display: flex;
   flex-wrap: wrap;
@@ -228,6 +225,10 @@ footer {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.cards-duplos {
+  align-items: stretch;
 }
 
 @media (max-width: 768px) {
@@ -260,9 +261,8 @@ footer {
 }
 
 .product-card img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 10px;
@@ -310,6 +310,8 @@ footer {
     padding: 0.6rem 1rem;
   }
 }
+
+
 
 /* ===================== MODO CLARO ===================== */
 /*@media (prefers-color-scheme: light) {
@@ -374,4 +376,4 @@ footer {
     padding: 2rem 1rem;
     background-color: var(--verde-escuro);
     color: white;
-}}*/
+  }*/
